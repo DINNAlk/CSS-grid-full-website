@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oleo Script|ABeeZee">
+    <title>New</title>
+    <style>
+        /*Universal Selector*/
+        *{
+            box-sizing: border-box;
+            margin:0;
+            padding:0;
+        }
+        /*body*/
+        body{
+            background-color:#1e1f24;;
+        }
+        #container{
+            display:grid;
+            grid-template-columns: 70% 30%;
+            grid-template-rows: 100vh;
+        }
+        #i1{
+            display:grid;
+            grid-template-columns: auto;
+            grid-template-rows: 30vh 50vh 20vh;
+        }
+        #b1{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Oleo Script';
+            color: #DACCC9;
+            font-size: 15px;
+            animation: animi 2s ;
+            margin-top: 20px;
+        }
+        #b2{
+            display: flex;
+            justify-content: center;
+            font-family: 'ABeeZee';
+            color: #DACCC9;
+            font-size: 100px;
+            animation: animi 2s ;
+            margin-top: 20px;
+            padding: 5px;
+      
+        }
+        #b3{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Oleo Script';
+            color: #DACCC9;
+            gap:250px;
+            animation: animi 2s ;
+            margin-top: 20px;
+            padding: 5px;
+        }
+        #i2{
+            margin-top: -20px;
+            opacity:0%;
+            transition: 0.4s opacity;
+            padding: 5px;
+        }
+        /*Animation*/
+        @keyframes animiZ {
+            0%{
+                margin-top:20px ;
+                opacity: 0%;
+            }
+        100%{
+            margin-top:-20px ;
+            opacity: 100%;
+        }}
+        
+        @keyframes animi {
+            0%{
+                margin-top:-20px ;
+            }
+        100%{
+            margin-top:20px ;
+        }
+        }
+       /*responsive*/
+        @media only screen and (max-width: 768px) {
+            #container{
+            display:grid;
+            grid-template-columns: auto;
+            grid-template-rows: 70vh 30vh;
+        }
+        #i1{
+            display:grid;
+            grid-template-columns: auto;
+            grid-template-rows: 20vh 30vh 20vh;
+        }
+        #b3{
+            gap: 200px;
+        }
+}
+@media only screen and (max-width:376px) {
+            #container{
+            display:grid;
+            grid-template-columns: auto;
+            grid-template-rows: 70vh 30vh;
+        }
+        #i1{
+            display:grid;
+            grid-template-columns: auto;
+            grid-template-rows: 20vh 30vh 20vh;
+        }
+        #b3{
+            gap: 50px;
+        }
+}
+    </style>
+</head>
+<body>
+    <!--Main content-->
+<div id="container">
+    <!--Sub Container 1-->
+    <div id="i1" style="background-color: #1e1f24;">
+ <!--b1 of Sub Container 1-->
+        <div id="b1">
+            PORTFOLIO
+        </div>
+<!--b2 of Sub Container 1-->
+        <div id="b2">
+            Freya <br>
+            Moore
+        </div>
+<!--b3 of Sub Container 1-->
+        <div id="b3">
+            <p id="t1">Designer & Art DIrector</p>
+            <p id="t1">Email Me</p>
+        </div>
+    </div>
+    <!--Sub Container 2-->
+    <div id="i2" style="background-image: url('Images/Cream and Brown Photographic Beauty Site Launch Website.jpg');background-repeat: no-repeat;background-size: cover;"></div>
+</div>
+<!--JS-->
+<script>
+    //SetTimeOut for the x variable
+    setTimeout(()=>{
+        var x=document.getElementById('i2');
+        x.style.animation='animiZ 2s';
+        x.style.opacity='100%';
+    },1500);
+</script>
+</body>
+</html>
